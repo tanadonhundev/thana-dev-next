@@ -26,7 +26,7 @@ export default function HomeSection() {
             </div>
             <div className="mt-8 animate-bounce">
               <a
-                href="#features"
+                href="#contact"
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-200 animate-bounce"
               >
                 Contact

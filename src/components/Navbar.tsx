@@ -40,7 +40,9 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-blue-300 shadow-lg" : "bg-blue-500"
+        isScrolled
+          ? "bg-blue-500 bg-opacity-90 shadow-lg" // เปลี่ยนเป็นพื้นหลังสีเข้มพร้อมความโปร่งใส
+          : "bg-blue-500 bg-opacity-50"
       }`}
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
