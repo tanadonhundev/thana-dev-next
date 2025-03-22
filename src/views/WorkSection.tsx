@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import ExperienceCard from "../components/ExperienceCard";
+import { motion } from "framer-motion";
 
 export default function WorkSection() {
   const sectionRef = useRef(null);
@@ -9,9 +10,8 @@ export default function WorkSection() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
-        // Update visibility status dynamically
       },
-      { threshold: 0.1 } // Trigger when 30% of the section is visible
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -36,21 +36,38 @@ export default function WorkSection() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-8 text-yellow-600">
-            Work Experience
+            Work and Experience
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <ExperienceCard
-              title="Software Developer"
-              company="isoftel thailand co ltd"
-              period="2024 Mar - Present"
-              description="Responsible for developing web applications using React and Node.js..."
-            />
-            <ExperienceCard
-              title="Cooperative training"
-              company="Company Name"
-              period="2023 Nov - 2024 Feb"
-              description="Assisted in developing responsive web applications and maintained codebase..."
-            />
+            {/* Card แรก: เลื่อนจากซ้าย + มีเอฟเฟกต์ hover */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={isVisible ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              whileHover={{ scale: 1.05, y: -5 }}
+            >
+              <ExperienceCard
+                title="Software Developer"
+                company="isoftel thailand co ltd"
+                period="2024 Mar - 2025 Feb"
+                description="Responsible for developing web applications using React and Node.js..."
+              />
+            </motion.div>
+
+            {/* Card ที่สอง: เลื่อนจากขวา + มีเอฟเฟกต์ hover */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={isVisible ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              whileHover={{ scale: 1.05, y: -5 }}
+            >
+              <ExperienceCard
+                title="Cooperative training"
+                company="Company Name"
+                period="2023 Nov - 2024 Feb"
+                description="Assisted in developing responsive web applications and maintained codebase..."
+              />
+            </motion.div>
           </div>
         </div>
       </section>

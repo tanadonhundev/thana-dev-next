@@ -37,7 +37,7 @@ export default function HomeSection() {
           {/* คอลัมน์รูปภาพ */}
           <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
             <img
-              src="https://via.placeholder.com/500x400"
+              src="/1111.jpg"
               alt="Placeholder Image"
               className="rounded-lg shadow-lg max-w-full h-auto"
             />
