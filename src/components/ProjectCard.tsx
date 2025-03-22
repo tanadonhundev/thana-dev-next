@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 type ProjectCardProps = {
@@ -19,7 +20,7 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className="bg-white rounded-lg shadow-lg p-6 relative">
-      <img
+      <Image
         src={imgSrc}
         alt={altText}
         className="rounded-t-lg w-full h-56 object-cover"

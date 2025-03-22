@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa"; // Import icons
 
@@ -9,7 +10,7 @@ export default function HomeSection() {
           {/* คอลัมน์ข้อความ */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center h-screen">
             <h1 className="text-4xl sm:text-6xl font-bold transition duration-300 hover:scale-105">
-              Hello, I'am
+              Hello, I&apos;am
             </h1>
             <h1 className="text-4xl sm:text-6xl font-bold transition duration-300 hover:scale-105">
               Tanadon Don
@@ -37,7 +38,7 @@ export default function HomeSection() {
 
           {/* คอลัมน์รูปภาพ */}
           <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
-            <img
+            <Image
               src="/profile.jpg"
               alt="Placeholder Image"
               className="rounded-lg shadow-lg max-w-full h-auto"
