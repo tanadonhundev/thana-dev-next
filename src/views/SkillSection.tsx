@@ -47,7 +47,16 @@ export default function SkillSection() {
             >
               <SkillCard
                 title="Frontend Development"
-                skills={["React", "HTML/CSS", "Tailwind CSS",]}
+                skills={[
+                  "React.js",
+                  "Next.js",
+                  "HTML/CSS",
+                  "JavaScript",
+                  "TyprScript",
+                  "Tailwind CSS",
+                  "Material-UI",
+                  "Bootstrap",
+                ]}
               />
             </motion.div>
             <motion.div
@@ -58,7 +67,15 @@ export default function SkillSection() {
             >
               <SkillCard
                 title="Backend Development"
-                skills={["Node.js", "Express", "MongoDB"]}
+                skills={[
+                  "Node.js",
+                  "Nest.js",
+                  "Express.js",
+                  "RESTful APIs",
+                  "Socket.IO",
+                  "TypeORM",
+                  "Sequelize",
+                ]}
               />
             </motion.div>
             <motion.div
@@ -67,9 +84,17 @@ export default function SkillSection() {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               whileHover={{ scale: 1.05, y: -5 }}
             >
+              <SkillCard title="Database" skills={["MySql", "MongoDB"]} />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={isVisible ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              whileHover={{ scale: 1.05, y: -5 }}
+            >
               <SkillCard
                 title="Tools & Technologies"
-                skills={["Git/GitHub", "Docker", "REST APIs"]}
+                skills={["Git/GitHub", "Postman", "HeidiSQL", "PM2"]}
               />
             </motion.div>
           </div>

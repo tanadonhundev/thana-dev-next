@@ -108,7 +108,7 @@ export default function WorkSection() {
               whileHover={{ scale: 1.05, y: -5 }}
             >
               <ProjectCard
-                title="Find Parttime Job Platform"
+                title="Profile Tanadon"
                 period="2024 Dec - persent"
                 description={[
                   "Frontend: Next.js + Tailwind CSS",

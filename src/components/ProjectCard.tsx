@@ -35,7 +35,7 @@ export default function ProjectCard({
         {/* ปุ่มที่ให้ผู้ใช้กด */}
         <button
           onClick={onButtonClick}
-          className="absolute bottom-4 right-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+          className="absolute bottom-4 right-4 px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700"
         >
           View Details
         </button>
