@@ -47,7 +47,7 @@ export default function SkillSection() {
             >
               <SkillCard
                 title="Frontend Development"
-                skills={["React", "HTML/CSS", "Tailwind CSS"]}
+                skills={["React", "HTML/CSS", "Tailwind CSS",]}
               />
             </motion.div>
             <motion.div

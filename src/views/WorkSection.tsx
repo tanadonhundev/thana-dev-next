@@ -48,9 +48,14 @@ export default function WorkSection() {
             >
               <ExperienceCard
                 title="Software Developer"
-                company="isoftel thailand co ltd"
+                company="Softel Communication (Thailand) Co., Ltd."
                 period="2024 Mar - 2025 Feb"
-                description="Responsible for developing web applications using React and Node.js..."
+                description={[
+                  "Develop and maintain web applications with React.js, Next.js and tailwind.",
+                  "Work with the Backend team to design APIs and test them through Postman.",
+                  "Work with the team to resolve issues that arise.",
+                  "Deploy the system to Server Test with PM2",
+                ]}
               />
             </motion.div>
 
@@ -63,11 +68,44 @@ export default function WorkSection() {
             >
               <ExperienceCard
                 title="Cooperative training"
-                company="Company Name"
+                company="Softel Communication (Thailand) Co., Ltd."
                 period="2023 Nov - 2024 Feb"
-                description="Assisted in developing responsive web applications and maintained codebase..."
+                description={[
+                  "Develop and maintain web applications with React.js + Material-UI.",
+                  "Design API to connect to Backend using Express.js and MySQL.",
+                  "Improved UI/UX and optimized web application performance.",
+                  "Deploy the system to Server Test with PM2",
+                ]}
               />
             </motion.div>
+            <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
+            <img
+              src="/1111.jpg"
+              alt="Placeholder Image"
+              className="rounded-lg shadow-lg max-w-full h-auto"
+            />
+          </div>
+          <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
+            <img
+              src="/1111.jpg"
+              alt="Placeholder Image"
+              className="rounded-lg shadow-lg max-w-full h-auto"
+            />
+          </div>
+          <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
+            <img
+              src="/1111.jpg"
+              alt="Placeholder Image"
+              className="rounded-lg shadow-lg max-w-full h-auto"
+            />
+          </div>
+          <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
+            <img
+              src="/1111.jpg"
+              alt="Placeholder Image"
+              className="rounded-lg shadow-lg max-w-full h-auto"
+            />
+          </div>
           </div>
         </div>
       </section>

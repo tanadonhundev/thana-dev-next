@@ -1,4 +1,5 @@
 import React from "react";
+import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa"; // Import icons
 
 export default function HomeSection() {
   return (
@@ -19,9 +20,9 @@ export default function HomeSection() {
               </p>
             </div>
             <div className="overflow-hidden w-full mt-4">
-              <p className="text-lg sm:text-xl p-2  text-left">
+              <p className="text-lg sm:text-xl p-2 text-left">
                 This website presents the work experience and works of Mr.
-                Tanadon Hunsadee,You can see the details on this website.
+                Tanadon Hunsadee, You can see the details on this website.
               </p>
             </div>
             <div className="mt-8 animate-bounce">
@@ -41,6 +42,34 @@ export default function HomeSection() {
               alt="Placeholder Image"
               className="rounded-lg shadow-lg max-w-full h-auto"
             />
+          </div>
+
+          {/* Social media links */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-6">
+            <a
+              href="https://www.facebook.com/tanadon.hunsadee"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800"
+            >
+              <FaFacebook size={30} />
+            </a>
+            <a
+              href="https://github.com/tanadonhundev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-800 hover:text-gray-600"
+            >
+              <FaGithub size={30} />
+            </a>
+            <a
+              href="https://www.instagram.com/thana_hun"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-600 hover:text-pink-800"
+            >
+              <FaInstagram size={30} />
+            </a>
           </div>
         </div>
       </section>
