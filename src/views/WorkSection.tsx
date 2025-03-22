@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import ExperienceCard from "../components/ExperienceCard";
 import { motion } from "framer-motion";
+import ProjectCard from "@/components/ProjectCard";
 
 export default function WorkSection() {
   const sectionRef = useRef(null);
@@ -78,34 +79,49 @@ export default function WorkSection() {
                 ]}
               />
             </motion.div>
-            <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
-            <img
-              src="/1111.jpg"
-              alt="Placeholder Image"
-              className="rounded-lg shadow-lg max-w-full h-auto"
-            />
-          </div>
-          <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
-            <img
-              src="/1111.jpg"
-              alt="Placeholder Image"
-              className="rounded-lg shadow-lg max-w-full h-auto"
-            />
-          </div>
-          <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
-            <img
-              src="/1111.jpg"
-              alt="Placeholder Image"
-              className="rounded-lg shadow-lg max-w-full h-auto"
-            />
-          </div>
-          <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
-            <img
-              src="/1111.jpg"
-              alt="Placeholder Image"
-              className="rounded-lg shadow-lg max-w-full h-auto"
-            />
-          </div>
+            {/* Additional cards with images */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={isVisible ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+              whileHover={{ scale: 1.05, y: -5 }}
+            >
+              <ProjectCard
+                title="Find Parttime Job Platform"
+                period="2023 Nov - 2024 Oct"
+                description={[
+                  "Frontend: React.js + MUI",
+                  "Backend: Node.js(express.js)",
+                  "Database: MongoDB",
+                ]}
+                imgSrc="/pro1.jpg"
+                altText="Project Image"
+                onButtonClick={() =>
+                  alert("Sorry, you can't view the details yet.")
+                } // ฟังก์ชันที่จะถูกเรียกเมื่อคลิกปุ่ม
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={isVisible ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              whileHover={{ scale: 1.05, y: -5 }}
+            >
+              <ProjectCard
+                title="Find Parttime Job Platform"
+                period="2024 Dec - persent"
+                description={[
+                  "Frontend: Next.js + Tailwind CSS",
+                  "Backend: -",
+                  "Database: -",
+                ]}
+                imgSrc="/pro2.jpg"
+                altText="Project Image"
+                onButtonClick={() =>
+                  alert("Sorry, you can't view the details yet.")
+                } // ฟังก์ชันที่จะถูกเรียกเมื่อคลิกปุ่ม
+              />
+            </motion.div>
           </div>
         </div>
       </section>
