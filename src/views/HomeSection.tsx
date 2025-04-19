@@ -41,6 +41,8 @@ export default function HomeSection() {
             <Image
               src="/profile.jpg"
               alt="Placeholder Image"
+              width={400}
+              height={400}
               className="rounded-lg shadow-lg max-w-full h-auto"
             />
           </div>
