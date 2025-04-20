@@ -39,16 +39,16 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-blue-500 bg-opacity-90 shadow-lg" // เปลี่ยนเป็นพื้นหลังสีเข้มพร้อมความโปร่งใส
-          : "bg-blue-500 bg-opacity-50"
+          ? "bg-blue-500/90 shadow-lg" // เปลี่ยนเป็นพื้นหลังสีเข้มพร้อมความโปร่งใส
+          : "bg-blue-500/50 "
       }`}
     >
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <a href="#" className="text-lg font-bold">
               ThaNaDev
             </a>
@@ -58,7 +58,7 @@ export default function Navbar() {
           <div className="flex md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white"
+              className="p-2 rounded-md focus:outline-hidden focus:ring-2 focus:ring-white"
             >
               <svg
                 className="w-6 h-6"
