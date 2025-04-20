@@ -9,12 +9,12 @@ export default function HomeSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-screen flex flex-col md:flex-row items-center justify-between">
           {/* คอลัมน์ข้อความ */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center h-screen">
-            <h1 className="text-4xl sm:text-6xl font-bold transition duration-300 hover:scale-105">
+            <p className="text-4xl sm:text-6xl font-bold transition duration-300 hover:scale-105">
               Hello, I&apos;am
-            </h1>
-            <h1 className="text-4xl sm:text-6xl font-bold transition duration-300 hover:scale-105">
+            </p>
+            <p className="text-4xl sm:text-6xl font-bold transition duration-300 hover:scale-105">
               Tanadon Don
-            </h1>
+            </p>
             <div className="overflow-hidden w-full mt-4">
               <p className="text-lg sm:text-xl p-2 ">
                 Full Stack Developer • Software Developer
