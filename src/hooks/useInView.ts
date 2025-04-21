@@ -12,7 +12,7 @@ export const useInView = () => {
         setIsInView(entry.isIntersecting);
       },
       {
-        threshold: 1.2,
+        threshold: 0.2,
       }
     );
 
