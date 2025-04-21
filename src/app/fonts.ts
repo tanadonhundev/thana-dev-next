@@ -1,4 +1,4 @@
-import { K2D, Sarabun, Kanit } from "next/font/google";
+import { K2D } from "next/font/google";
 
 const k2d = K2D({
   subsets: ["thai"],

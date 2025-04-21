@@ -1,7 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import SkillCard from "@/components/SkillCard";
-import { motion } from "framer-motion";
-import { FaAngular, FaNodeJs, FaReact, FaVuejs } from "react-icons/fa";
 import TechFrontGroup from "@/components/TechFrontGroup";
 import TechbackGroup from "@/components/TechbackGroup";
 import TechLanguagesGroup from "@/components/TechLanguagesGroup";
