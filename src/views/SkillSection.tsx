@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import SkillCard from "@/components/SkillCard";
 import { motion } from "framer-motion";
+import { FaAngular, FaNodeJs, FaReact, FaVuejs } from "react-icons/fa";
+import TechFrontGroup from "@/components/TechFrontGroup";
 
 export default function SkillSection() {
   const sectionRef = useRef(null);
@@ -40,6 +42,8 @@ export default function SkillSection() {
           <div className="flex justify-center">
             <h1>Skills</h1>
           </div>
+          <TechFrontGroup />
+
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
