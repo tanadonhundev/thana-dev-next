@@ -12,7 +12,10 @@ const frontEndItems = [
   },
   { icon: <SiMui className="text-blue-500 text-5xl" />, label: "Material-UI" },
   { icon: <SiShadcnui className="text-5xl" />, label: "Shadcn-UI" },
-  { icon: <FaBootstrap className="text-purple-600 text-5xl" />, label: "Bootstrap" },
+  {
+    icon: <FaBootstrap className="text-purple-600 text-5xl" />,
+    label: "Bootstrap",
+  },
 ];
 
 export default function TechFrontGroup() {

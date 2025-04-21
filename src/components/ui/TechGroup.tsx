@@ -26,9 +26,16 @@ function TechGroup({ title, items }: TechGroupProps) {
       className="flex flex-col items-center p-4 bg-gray-200 rounded-lg shadow-2xl"
     >
       <p className="text-xl font-semibold mb-4">{title}</p>
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 place-items-center">
+      <div className="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-4 justify-items-center">
         {items.map((tech, idx) => (
-          <TechIcon key={idx} icon={tech.icon} label={tech.label} />
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.4, delay: idx * 0.1 }}
+          >
+            <TechIcon icon={tech.icon} label={tech.label} />
+          </motion.div>
         ))}
       </div>
     </motion.div>

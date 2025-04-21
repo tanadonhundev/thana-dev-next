@@ -9,7 +9,7 @@ const TechIcon: React.FC<TechIconProps> = ({ icon, label }) => {
   return (
     <div className="flex flex-col items-center">
       {icon}
-      <span className="text-md mt-1">{label}</span>
+      <p className="mt-1">{label}</p>
     </div>
   );
 };
