@@ -17,8 +17,7 @@ export default function SkillSection() {
       { threshold: 0.1 }
     );
 
-    const currentSection = sectionRef.current; // เก็บค่า sectionRef.current ไว้ในตัวแปร
-
+    const currentSection = sectionRef.current; 
     if (currentSection) {
       observer.observe(currentSection);
     }
@@ -35,7 +34,7 @@ export default function SkillSection() {
       <section
         id="skills"
         ref={sectionRef}
-        className={`py-16 transition-opacity duration-1000 ${
+        className={`py-16 bg-white transition-opacity duration-1000 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >

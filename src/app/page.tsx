@@ -5,43 +5,43 @@ import HomeSection from "../views/HomeSection";
 import Navbar from "../components/Navbar";
 import SkillSection from "../views/SkillSection";
 import WorkSection from "../views/WorkSection";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import clsx from "clsx";
 
 export default function Home() {
   const cursorRef = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(false);
 
   useEffect(() => {
-    const cursor = cursorRef.current;
+    let frame: number;
 
-    const moveCursor = (e: MouseEvent) => {
-      if (!cursor) return;
-
-      cursor.style.top = `${e.clientY}px`;
-      cursor.style.left = `${e.clientX}px`;
-
-      // ให้เคอร์เซอร์โปร่งแสงเมื่อไม่ได้ hover
-      cursor.style.opacity = "0.5";
-
-      const target = e.target as HTMLElement;
-      console.log(target.tagName);
-
-      if (target.tagName !== "DIV") {
-        cursor.style.transform = `translate(-50%, -50%) scale(3)`;
-      } else {
-        cursor.style.backgroundColor = "#1d4ed8"; // กลับเป็นน้ำเงิน
-        cursor.style.opacity = "4"; // ให้ชัดเจนเมื่อ hover
-        cursor.style.transform = `translate(-50%, -50%) scale(1)`;
-      }
+    const onMouseMove = (e: MouseEvent) => {
+      // batch DOM writes into rAF
+      frame = requestAnimationFrame(() => {
+        if (!cursorRef.current) return;
+        cursorRef.current.style.setProperty("--cx", `${e.clientX}px`);
+        cursorRef.current.style.setProperty("--cy", `${e.clientY}px`);
+        setActive(true);
+      });
     };
 
-    document.addEventListener("mousemove", moveCursor);
+    const onMouseLeave = () => {
+      cancelAnimationFrame(frame);
+      setActive(false);
+    };
+
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseleave", onMouseLeave);
     return () => {
-      document.removeEventListener("mousemove", moveCursor);
+      cancelAnimationFrame(frame);
+      document.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("mouseleave", onMouseLeave);
     };
   }, []);
+
   return (
     <div>
-      <div ref={cursorRef} className="custom-cursor" />
+      <div ref={cursorRef} className={clsx("custom-cursor", { active })} />
       <Navbar />
       <HomeSection />
       <AboutSection />

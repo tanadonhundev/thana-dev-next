@@ -37,31 +37,37 @@ h1::after {
 }
 
 .custom-cursor {
+  /* CSS variables for position */
+  --cx: 0;
+  --cy: 0;
+
   position: fixed;
-  top: 0; left: 0;
-  width: 24px; height: 24px;
-  background: transparent;           /* transparent ให้เห็นเบื้องหลัง */
+  top: var(--cy);
+  left: var(--cx);
+  width: 24px;
+  height: 24px;
+
+  /* white background + invert any backdrop (= white→black, black→white) */
+  background: #fff;
+  mix-blend-mode: difference;
+
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
 
-  /* สร้างฟิล์มเอ็กซ์เรย์ด้วย backdrop-filter + blend-mode */
-  backdrop-filter: invert(1) brightness(1.2) contrast(1.1);
-  mix-blend-mode: screen;
-
-  /* ใช้ขอบบาง ๆ เพื่อให้เห็นขอบวง */
-  border: 1px solid rgba(255,255,255,0.4);
-
-  /* จัดกึ่งกลาง และ transition */
+  /* initial size & opacity */
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 0.1s ease-out, opacity 0.2s ease;
-  opacity: 0.7;
+  opacity: 0.8;
+
+  /* smooth transitions */
+  transition: transform 0.15s ease-out, opacity 0.15s ease-out;
 }
 
-.custom-cursor:hover {
-  transform: translate(-50%, -50%) scale(5);
+/* when “active” (moving), we scale & make it fully opaque */
+.custom-cursor.active {
+  transform: translate(-50%, -50%) scale(3);
+  opacity: 1;
 }
-
 @keyframes underline {
   to {
     width: 100%;
