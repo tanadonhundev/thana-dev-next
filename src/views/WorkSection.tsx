@@ -1,41 +1,16 @@
-import React, { useEffect, useState, useRef } from "react";
 import ExperienceCard from "../components/ExperienceCard";
 import { motion } from "framer-motion";
 import ProjectCard from "@/components/ProjectCard";
+import { useInView } from "@/hooks/useInView";
 
 export default function WorkSection() {
-  const sectionRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      { threshold: 0.1 }
-    );
-
-    const currentSection = sectionRef.current; // เก็บค่า sectionRef.current ไว้ในตัวแปร
-
-    if (currentSection) {
-      observer.observe(currentSection);
-    }
-
-    return () => {
-      if (currentSection) {
-        observer.unobserve(currentSection);
-      }
-    };
-  }, []);
-
+  const { ref, isInView } = useInView();
   return (
     <div>
       <section
         id="experience"
-        ref={sectionRef}
-        className={`py-16 bg-gray-400 transition-opacity duration-1000 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        ref={ref}
+        className={`py-16 bg-gray-400 transition-opacity duration-1000 `}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center">
@@ -45,7 +20,7 @@ export default function WorkSection() {
             {/* Card แรก: เลื่อนจากซ้าย + มีเอฟเฟกต์ hover */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
-              animate={isVisible ? { opacity: 1, x: 0 } : {}}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
               whileHover={{ scale: 1.05, y: -5 }}
             >
@@ -65,7 +40,7 @@ export default function WorkSection() {
             {/* Card ที่สอง: เลื่อนจากขวา + มีเอฟเฟกต์ hover */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
-              animate={isVisible ? { opacity: 1, x: 0 } : {}}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               whileHover={{ scale: 1.05, y: -5 }}
             >
@@ -84,7 +59,7 @@ export default function WorkSection() {
             {/* Additional cards with images */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
-              animate={isVisible ? { opacity: 1, x: 0 } : {}}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
               whileHover={{ scale: 1.05, y: -5 }}
             >
@@ -105,7 +80,7 @@ export default function WorkSection() {
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 50 }}
-              animate={isVisible ? { opacity: 1, x: 0 } : {}}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
               whileHover={{ scale: 1.05, y: -5 }}
             >
