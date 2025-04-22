@@ -7,36 +7,12 @@ import TechAndToolGroup from "@/components/TechAndToolGroup";
 
 export default function SkillSection() {
   const sectionRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      { threshold: 0.1 }
-    );
-
-    const currentSection = sectionRef.current; 
-    if (currentSection) {
-      observer.observe(currentSection);
-    }
-
-    return () => {
-      if (currentSection) {
-        observer.unobserve(currentSection);
-      }
-    };
-  }, []);
-
   return (
     <div>
       <section
         id="skills"
         ref={sectionRef}
-        className={`py-16 bg-white transition-opacity duration-1000 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={"py-16 bg-gray-700 transition-opacity duration-1000"}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="flex justify-center">

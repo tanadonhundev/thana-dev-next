@@ -38,11 +38,28 @@ export default function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100); // แสดงปุ่มเมื่อเลื่อนมากกว่า 100px
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // ฟังก์ชั่นสำหรับเลื่อนขึ้นไปที่ด้านบน
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // ทำให้การเลื่อนลื่น
+    });
+  };
+
   return (
     <nav
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-blue-500/90 shadow-lg" // เปลี่ยนเป็นพื้นหลังสีเข้มพร้อมความโปร่งใส
+          ? "bg-amber-700/90 shadow-lg" // เปลี่ยนเป็นพื้นหลังสีเข้มพร้อมความโปร่งใส
           : "bg-blue-500/0 "
       }`}
     >
@@ -150,6 +167,14 @@ export default function Navbar() {
             </a>
           </div>
         </div>
+        {isScrolled && (
+          <button
+            onClick={scrollToTop}
+            className="fixed  bottom-6 right-6 bg-amber-600 hover:bg-amber-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hidden md:block"
+          >
+            ↑
+          </button>
+        )}
       </div>
 
       {/* เมนู Dropdown สำหรับมือถือ */}
@@ -163,26 +188,37 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
           >
             <a
-              href="#"
-              className="block px-4 py-2 hover:bg-blue-700 hover:text-white"
+              href="#home"
+              className="block px-4 py-2 hover:bg-amber-600 hover:text-white"
+              onClick={() => setIsMenuOpen(false)}
             >
               Home
             </a>
             <a
-              href="#"
-              className="block px-4 py-2 hover:bg-blue-700 hover:text-white"
+              href="#about"
+              className="block px-4 py-2 hover:bg-amber-600 hover:text-white"
+              onClick={() => setIsMenuOpen(false)}
             >
               About
             </a>
             <a
-              href="#"
-              className="block px-4 py-2 hover:bg-blue-700 hover:text-white"
+              href="#experience"
+              className="block px-4 py-2 hover:bg-amber-600 hover:text-white"
+              onClick={() => setIsMenuOpen(false)}
             >
-              Services
+              Work
             </a>
             <a
-              href="#"
-              className="block px-4 py-2 hover:bg-blue-700 hover:text-white"
+              href="#skills"
+              className="block px-4 py-2 hover:bg-amber-600 hover:text-white"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Skills
+            </a>
+            <a
+              href="#contact"
+              className="block px-4 py-2 hover:bg-amber-600 hover:text-white"
+              onClick={() => setIsMenuOpen(false)}
             >
               Contact
             </a>

@@ -20,7 +20,7 @@ export default function AboutSection() {
   };
 
   return (
-    <section id="about" className="h-screen">
+    <section id="about">
       <div className="flex flex-col md:flex-row h-full">
         {/* ฝั่งซ้าย - ข้อความ พร้อมพื้นหลัง amber */}
         <div className="bg-gray-300 md:w-1/2 flex justify-center items-center p-6 relative">
