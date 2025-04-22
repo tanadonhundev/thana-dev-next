@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
 export default function Navbar() {
@@ -58,22 +59,39 @@ export default function Navbar() {
           <div className="flex md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-md focus:outline-hidden focus:ring-2 focus:ring-white"
+              className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-black"
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              </svg>
+              {isMenuOpen ? (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  />
+                </svg>
+              )}
             </button>
           </div>
 
@@ -135,22 +153,42 @@ export default function Navbar() {
       </div>
 
       {/* เมนู Dropdown สำหรับมือถือ */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-blue-500">
-          <a href="#" className="block px-4 py-2 text-sm hover:bg-blue-700">
-            Home
-          </a>
-          <a href="#" className="block px-4 py-2 text-sm hover:bg-blue-700">
-            About
-          </a>
-          <a href="#" className="block px-4 py-2 text-sm hover:bg-blue-700">
-            Services
-          </a>
-          <a href="#" className="block px-4 py-2 text-sm hover:bg-blue-700">
-            Contact
-          </a>
-        </div>
-      )}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            className="md:hidden bg-white"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <a
+              href="#"
+              className="block px-4 py-2 hover:bg-blue-700 hover:text-white"
+            >
+              Home
+            </a>
+            <a
+              href="#"
+              className="block px-4 py-2 hover:bg-blue-700 hover:text-white"
+            >
+              About
+            </a>
+            <a
+              href="#"
+              className="block px-4 py-2 hover:bg-blue-700 hover:text-white"
+            >
+              Services
+            </a>
+            <a
+              href="#"
+              className="block px-4 py-2 hover:bg-blue-700 hover:text-white"
+            >
+              Contact
+            </a>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }
