@@ -78,45 +78,54 @@ export default function Navbar() {
           </div>
 
           {/* เมนูหลัก */}
-          <div className="hidden md:flex space-x-4">
+          <div className="hidden md:flex space-x-6">
             <a
               href="#home"
-              className={`px-3 py-2 rounded-md text-sm font-medium ${
-                activeLink === "home" ? "bg-blue-700" : "hover:bg-blue-700"
+              className={`${
+                activeLink === "home"
+                  ? "text-white underline underline-offset-5 decoration-2 decoration-amber-600"
+                  : "text-white hover:underline underline-offset-5 decoration-2 decoration-amber-600"
               }`}
             >
               Home
             </a>
+
             <a
               href="#about"
-              className={`px-3 py-2 rounded-md text-sm font-medium ${
-                activeLink === "about" ? "bg-blue-700" : "hover:bg-blue-700"
+              className={`${
+                activeLink === "about"
+                  ? "text-white underline underline-offset-5 decoration-2 decoration-amber-600"
+                  : "text-white hover:underline underline-offset-5 decoration-2 decoration-amber-600"
               }`}
             >
               About
             </a>
             <a
               href="#experience"
-              className={`px-3 py-2 rounded-md text-sm font-medium ${
+              className={` ${
                 activeLink === "experience"
-                  ? "bg-blue-700"
-                  : "hover:bg-blue-700"
+                  ? "text-white underline underline-offset-5 decoration-2 decoration-amber-600"
+                  : "text-white hover:underline underline-offset-5 decoration-2 decoration-amber-600"
               }`}
             >
               Work
             </a>
             <a
               href="#skills"
-              className={`px-3 py-2 rounded-md text-sm font-medium ${
-                activeLink === "skills" ? "bg-blue-700" : "hover:bg-blue-700"
+              className={` ${
+                activeLink === "skills"
+                  ? "text-white underline underline-offset-5 decoration-2 decoration-amber-600"
+                  : "text-white hover:underline underline-offset-5 decoration-2 decoration-amber-600"
               }`}
             >
               Skills
             </a>
             <a
               href="#contact"
-              className={`px-3 py-2 rounded-md text-sm font-medium ${
-                activeLink === "contact" ? "bg-blue-700" : "hover:bg-blue-700"
+              className={`  ${
+                activeLink === "contact"
+                  ? "text-white underline underline-offset-5 decoration-2 decoration-amber-600"
+                  : "text-white hover:underline underline-offset-5 decoration-2 decoration-amber-600"
               }`}
             >
               Contact

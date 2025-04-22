@@ -54,9 +54,9 @@ export default function HomeSection() {
           </div>
 
           {/* ฝั่งขวา - รูปภาพ พร้อมพื้นหลังเทา */}
-          <div className="bg-gray-100 w-full md:w-1/2 not-first:flex items-center justify-center p-6 relative">
+          <div className="bg-gray-800 w-full md:w-1/2 not-first:flex items-center justify-center p-6 relative">
             <div
-              className="w-full h-screen flex items-center justify-center bg-gray-100 "
+              className="w-full h-screen flex items-center justify-center bg-gray-800 "
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
             >
@@ -82,7 +82,7 @@ export default function HomeSection() {
                 href="https://www.facebook.com/tanadon.hunsadee"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800"
+                className="text-white"
               >
                 <FaFacebook size={30} />
               </a>
@@ -90,7 +90,7 @@ export default function HomeSection() {
                 href="https://github.com/tanadonhundev"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-800 hover:text-gray-600"
+                className="text-white"
               >
                 <FaGithub size={30} />
               </a>
@@ -98,7 +98,7 @@ export default function HomeSection() {
                 href="https://www.instagram.com/thana_hun"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-pink-600 hover:text-pink-800"
+                className="text-white"
               >
                 <FaInstagram size={30} />
               </a>
