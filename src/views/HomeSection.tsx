@@ -21,7 +21,7 @@ export default function HomeSection() {
   };
 
   return (
-    <div>
+ 
       <section id="home" className="h-screen">
         <div className="flex flex-col md:flex-row h-full">
           {/* ฝั่งซ้าย - ข้อความ พร้อมพื้นหลัง amber */}
@@ -54,9 +54,9 @@ export default function HomeSection() {
           </div>
 
           {/* ฝั่งขวา - รูปภาพ พร้อมพื้นหลังเทา */}
-          <div className="bg-gray-800 w-full md:w-1/2 not-first:flex items-center justify-center p-6 relative">
+          <div className="bg-gray-800  md:w-1/2 not-first:flex  p-6 relative">
             <div
-              className="w-full h-screen flex items-center justify-center bg-gray-800 "
+              className="w-full flex items-center justify-center bg-gray-800 "
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
             >
@@ -106,6 +106,6 @@ export default function HomeSection() {
           </div>
         </div>
       </section>
-    </div>
+    
   );
 }
