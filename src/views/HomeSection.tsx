@@ -20,7 +20,7 @@ const child = {
 
 export default function HomeSection() {
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
-  const roles = ["Full Stack Developer", "Back-End Developer", "Front-End Developer"];
+  const roles = ["Full Stack Developer", "Back End Developer", "Front End Developer"];
   const [index, setIndex] = useState(0);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
