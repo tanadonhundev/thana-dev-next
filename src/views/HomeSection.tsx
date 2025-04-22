@@ -42,7 +42,7 @@ export default function HomeSection() {
       setIndex((prev) => (prev + 1) % roles.length);
     }, 4000); // เปลี่ยนข้อความทุก 4 วิ
     return () => clearInterval(interval);
-  }, []);
+  }, [roles.length]);
 
   const text = roles[index];
 
@@ -87,10 +87,10 @@ export default function HomeSection() {
               </p>
             </div>
           </div>
-          <div className="mt-8 animate-bounce">
+          <div className="mt-8">
             <a
               href="#contact"
-              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-200"
+              className="bg-gray-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-200"
             >
               Contact
             </a>
