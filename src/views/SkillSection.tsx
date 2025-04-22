@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useRef } from "react";
 import TechFrontGroup from "@/components/TechFrontGroup";
 import TechbackGroup from "@/components/TechbackGroup";
 import TechLanguagesGroup from "@/components/TechLanguagesGroup";
