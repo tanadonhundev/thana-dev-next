@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -68,7 +69,12 @@ export default function Navbar() {
           {/* Logo */}
           <div className="shrink-0">
             <a href="#" className="text-lg font-bold">
-              ThaNaDev
+              <Image
+                src="/Logo.png"
+                alt="Profile Image"
+                width={150}
+                height={150}
+              />
             </a>
           </div>
 

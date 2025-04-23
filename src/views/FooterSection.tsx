@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function FooterSection() {
   return (
@@ -7,7 +9,14 @@ export default function FooterSection() {
         <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6">
           {/* Branding & Copyright */}
           <div>
-            <h2 className="text-lg font-semibold">ThaNaDev</h2>
+            <Link href={"#home"}>
+              <Image
+                src="/Logo.png"
+                alt="Profile Image"
+                width={150}
+                height={150}
+              />
+            </Link>
             <p className="text-sm mt-1">
               Copyright &copy; 2025 ThaNaDev. All rights reserved.
             </p>
