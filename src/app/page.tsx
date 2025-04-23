@@ -7,6 +7,7 @@ import SkillSection from "../views/SkillSection";
 import WorkSection from "../views/WorkSection";
 import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
+import FooterSection from "@/views/FooterSection";
 
 export default function Home() {
   const cursorRef = useRef<HTMLDivElement>(null);
@@ -41,21 +42,17 @@ export default function Home() {
 
   return (
     <div>
-      <div ref={cursorRef} className={clsx("custom-cursor md:block hidden", { active })} />
+      <div
+        ref={cursorRef}
+        className={clsx("custom-cursor md:block hidden", { active })}
+      />
       <Navbar />
       <HomeSection />
       <AboutSection />
       <WorkSection />
       <SkillSection />
       <ContactSection />
-      <div>
-        {/* Call to Action Section */}
-       <section className="py-16 bg-amber-700 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p>&copy; 2025 Your Company. All rights reserved.</p>
-          </div>
-        </section> 
-      </div>
+      <FooterSection />
     </div>
   );
 }

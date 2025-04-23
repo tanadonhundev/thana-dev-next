@@ -47,7 +47,7 @@ export default function HomeSection() {
   const text = roles[index];
 
   return (
-    <section id="home" className="md:min-h-screen lg:h-screen">
+    <section id="home" className="md:h-screen lg:h-screen">
       <div className="flex flex-col md:flex-row h-full">
         {/* ฝั่งซ้าย - ข้อความ พร้อมพื้นหลัง amber */}
         <div className="bg-amber-600 w-full md:w-1/2 flex flex-col items-center justify-center text-center px-6 py-12">
