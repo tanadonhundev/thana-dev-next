@@ -41,7 +41,7 @@ export default function Home() {
 
   return (
     <div>
-      <div ref={cursorRef} className={clsx("custom-cursor", { active })} />
+      <div ref={cursorRef} className={clsx("custom-cursor md:block hidden", { active })} />
       <Navbar />
       <HomeSection />
       <AboutSection />
