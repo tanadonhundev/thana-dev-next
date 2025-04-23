@@ -23,7 +23,7 @@ export default function AboutSection() {
     <section id="about">
       <div className="flex flex-col md:flex-row h-full">
         {/* ฝั่งซ้าย - ข้อความ พร้อมพื้นหลัง amber */}
-        <div className="bg-gray-300 md:w-1/2 flex justify-center items-center p-6 relative">
+        <div className="bg-gray-300 md:w-1/2 flex justify-center items-center p-6 relative shadow-2xl">
           <div
             className="w-full flex justify-center items-center"
             onMouseMove={handleMouseMove}
@@ -47,7 +47,7 @@ export default function AboutSection() {
             </motion.div>
           </div>
         </div>
-        <div className="bg-amber-500 w-full md:w-1/2 flex flex-col justify-center  px-6 py-12">
+        <div className="bg-amber-500 w-full md:w-1/2 flex flex-col justify-center  px-6 py-12 shadow-2xl">
           <h2 className="text-5xl font-bold text-amber-950 mb-4">About Me</h2>
           <p className="text-lg sm:text-xl text-gray-700 text-left max-w-md">
             I graduated from King Mongkut&apos;s University of Technology North

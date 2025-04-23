@@ -47,7 +47,7 @@ export default function HomeSection() {
   const text = roles[index];
 
   return (
-    <section id="home" className="h-screen">
+    <section id="home" className="md:min-h-screen lg:h-screen">
       <div className="flex flex-col md:flex-row h-full">
         {/* ฝั่งซ้าย - ข้อความ พร้อมพื้นหลัง amber */}
         <div className="bg-amber-600 w-full md:w-1/2 flex flex-col items-center justify-center text-center px-6 py-12">
@@ -98,9 +98,9 @@ export default function HomeSection() {
         </div>
 
         {/* ฝั่งขวา - รูปภาพ พร้อมพื้นหลังเทา */}
-        <div className="bg-gray-800  md:w-1/2 not-first:flex  p-6 relative">
+        <div className="bg-gray-800 md:w-1/2 w-full flex flex-col justify-between items-center p-6">
           <div
-            className="w-full flex items-center justify-center bg-gray-800 "
+            className="flex-grow flex items-center justify-center w-full"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
           >
@@ -121,7 +121,7 @@ export default function HomeSection() {
             </motion.div>
           </div>
           {/* Social media links */}
-          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-6">
+          <div className="mt-6 flex space-x-6">
             <a
               href="https://www.facebook.com/tanadon.hunsadee"
               target="_blank"
