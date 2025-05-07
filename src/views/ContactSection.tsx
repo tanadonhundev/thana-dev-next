@@ -3,16 +3,12 @@ import React from "react";
 export default function ContactSection() {
   return (
     <div>
-      <section id="contact" className="bg-gray-400 py-12">
+      <section id="contact" className="bg-gray-100 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <div className="flex justify-center">
-              <h1>Contact Me</h1>
+              <p className="text-heading">Contact Me</p>
             </div>
-            <p className="text-lg text-gray-600 mt-4">
-              Feel free to reach out if you have any questions or want to
-              collaborate!
-            </p>
           </div>
 
           <div className="flex justify-center">

@@ -10,13 +10,15 @@ export default function WorkSection() {
       <section
         id="experience"
         ref={ref}
-        className={`py-16 bg-gray-400 transition-opacity duration-1000 `}
+        className={`py-16 bg-gray-100 transition-opacity duration-1000 `}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center">
-            <h1>Work and Experience</h1>
+            <p className="text-heading">
+              Work <span className="text-amber-500">and</span> Experience
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
             {/* Card แรก: เลื่อนจากซ้าย + มีเอฟเฟกต์ hover */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
