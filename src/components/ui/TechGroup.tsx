@@ -23,9 +23,9 @@ function TechGroup({ title, items }: TechGroupProps) {
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.6 }}
-      className="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow-2xl"
+      className="flex flex-col items-center p-4 bg-gray-200 rounded-lg shadow-2xl"
     >
-      <p className="text-3xl font-bold text-amber-800 mb-4">{title}</p>
+      <p className="text-3xl font-bold text-neutral-800 mb-4 text-center">{title}</p>
       <div className="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-4 justify-items-center">
         {items.map((tech, idx) => (
           <motion.div
