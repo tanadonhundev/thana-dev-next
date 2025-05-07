@@ -7,7 +7,10 @@ export default function ContactSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <div className="flex justify-center">
-              <p className="text-heading">Contact Me</p>
+              <p className="text-heading">
+                Contact
+                <span className="text-amber-700"> Me</span>
+              </p>
             </div>
           </div>
 
@@ -60,7 +63,6 @@ export default function ContactSection() {
                   <textarea
                     id="message"
                     name="message"
-                    // rows="4"
                     required
                     className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-xs focus:outline-hidden focus:ring-2 focus:ring-blue-500"
                   ></textarea>
