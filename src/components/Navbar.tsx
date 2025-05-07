@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { VscArrowUp } from "react-icons/vsc";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -176,9 +177,9 @@ export default function Navbar() {
         {isScrolled && (
           <button
             onClick={scrollToTop}
-            className="fixed  bottom-6 right-6 bg-amber-600 hover:bg-amber-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hidden md:block"
+            className="fixed bottom-6 right-6 bg-amber-600 hover:bg-amber-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hidden md:block"
           >
-            ↑
+            <VscArrowUp className="font-bold"/>
           </button>
         )}
       </div>
