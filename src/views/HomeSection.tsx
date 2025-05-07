@@ -20,7 +20,11 @@ const child = {
 
 export default function HomeSection() {
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
-  const roles = ["Full Stack Developer", "Back End Developer", "Front End Developer"];
+  const roles = [
+    "Full Stack Developer",
+    "Back End Developer",
+    "Front End Developer",
+  ];
   const [index, setIndex] = useState(0);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -90,7 +94,7 @@ export default function HomeSection() {
           <div className="mt-8">
             <a
               href="#contact"
-              className="bg-gray-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-200"
+              className="bg-gray-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-200 hover:text-black"
             >
               Contact
             </a>
