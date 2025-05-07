@@ -9,7 +9,7 @@ export default function ContactSection() {
             <div className="flex justify-center">
               <p className="text-heading">
                 Contact
-                <span className="text-amber-700"> Me</span>
+                <span className="text-amber-600"> Me</span>
               </p>
             </div>
           </div>
