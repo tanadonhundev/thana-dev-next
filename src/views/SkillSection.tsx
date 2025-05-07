@@ -20,7 +20,7 @@ export default function SkillSection() {
               Ski<span className="text-amber-600">ll</span>s
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6 bo">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
             <TechLanguagesGroup />
             <TechFrontGroup />
             <TechbackGroup />

@@ -15,7 +15,7 @@ export default function WorkSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center">
             <p className="text-heading">
-              Work <span className="text-amber-500">and</span> Experience
+              Work <span className="text-amber-600">and</span> Experience
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">

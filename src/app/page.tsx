@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import SkillSection from "../views/SkillSection";
 import WorkSection from "../views/WorkSection";
 import FooterSection from "@/views/FooterSection";
+import JobPositionSection from "@/views/JobPositionSection";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Navbar />
       <HomeSection />
       <AboutSection />
+      <JobPositionSection />
       <WorkSection />
       <SkillSection />
       <ContactSection />
